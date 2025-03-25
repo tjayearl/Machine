@@ -1,0 +1,17 @@
+{
+    "vehicles": [
+      {
+        "name": "Sedan A",
+        "type": "sedan",
+        "price": 20000,
+        "description": "A comfortable family sedan."
+      },
+      {
+        "name": "Luxury SUV",
+        "type": "suv",
+        "price": 50000,
+        "description": "A luxury SUV with advanced features."
+      }
+    ]
+  }
+  

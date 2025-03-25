@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Machine</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Vehicles</a></li>
+                    <li><a href="#">Sell</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="vehicles">
+                <!-- Vehicle Card 1 -->
+                <div class="vehicle-card">
+                    <div class="vehicle-image-container">
+                        <img src="car1.jpg" alt="Luxury Car" class="vehicle-image">
+                    </div>
+                    <div class="vehicle-details">
+                        <h3 class="vehicle-title">Luxury Car Model X</h3>
+                        <p class="vehicle-description">A beautiful and fast car.</p>
+                        <p class="vehicle-price">$120,000</p>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 2 -->
+                <div class="vehicle-card">
+                    <div class="vehicle-image-container">
+                        <img src="tractor1.jpg" alt="Tractor" class="vehicle-image">
+                    </div>
+                    <div class="vehicle-details">
+                        <h3 class="vehicle-title">Heavy Duty Tractor</h3>
+                        <p class="vehicle-description">Powerful tractor for all your farming needs.</p>
+                        <p class="vehicle-price">$80,000</p>
+                    </div>
+                </div>
+                <!-- Add more vehicle cards here -->
+            </section>
+
+            <section id="sell-form">
+                <h2>Sell Your Vehicle</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="vehicle-type">Vehicle Type</label>
+                        <select id="vehicle-type" name="vehicle-type">
+                            <option value="car">Car</option>
+                            <option value="truck">Truck</option>
+                            <option value="tractor">Tractor</option>
+                            <option value="motorcycle">Motorcycle</option>
+                            <!-- Add more options -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicle-make">Make</label>
+                        <input type="text" id="vehicle-make" name="vehicle-make" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicle-model">Model</label>
+                        <input type="text" id="vehicle-model" name="vehicle-model" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicle-description">Description</label>
+                        <textarea id="vehicle-description" name="vehicle-description" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Machine. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
