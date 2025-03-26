@@ -3,13 +3,14 @@
     {
       "id": 1,
       "name": "Toyota gt86",
-      "category": "sports",
+      "category": "most affordable",
       "color": "Silver",
       "engine": "2.0l 4-cylinder",
       "manufactured": "2011",
       "image": "https://images.pexels.com/photos/17245097/pexels-photo-17245097/free-photo-of-white-toyota-gt86-on-a-parking-lot.jpeg?auto=compress&cs=tinysrgb&w=600",
       "inStock": true
     },
+
     {
       "id": 2,
       "name": "Lamborghini Huracan",
@@ -20,6 +21,7 @@
       "image": "https://images.pexels.com/photos/27985076/pexels-photo-27985076/free-photo-of-lamborghini-huracan.jpeg?auto=compress&cs=tinysrgb&w=600",
       "inStock": true
     },
+
     {
       "id": 3,
       "name": "Tesla Model S",
@@ -30,6 +32,7 @@
       "image": "https://images.pexels.com/photos/16653735/pexels-photo-16653735/free-photo-of-view-of-a-black-tesla-model-s-on-a-parking-lot.jpeg?auto=compress&cs=tinysrgb&w=600",
       "inStock": true
     },
+
     {
       "id": 4,
       "name": "Mercedes-Benz S-Class",
@@ -39,6 +42,26 @@
       "manufactured": "2023",
       "image": "https://images.pexels.com/photos/20123634/pexels-photo-20123634/free-photo-of-new-mercedes-benz-in-showroom.jpeg?auto=compress&cs=tinysrgb&w=600",
       "inStock": true
+    },
+
+    {
+      "id": 5,
+      "name": "Toyota land cruiser",
+      "category": "SUV",
+      "color": "brown",
+      "engine": "4.6L V8",
+      "manufactured": "2023",
+      "image": "https://images.pexels.com/photos/18029616/pexels-photo-18029616/free-photo-of-brown-toyota-land-cruiser.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+
+    {
+      "id": 6,
+      "name": "Ferrari 296 GTB",
+      "category": "sports",
+      "color": "Red",
+      "engine": "V6 turbo engine",
+      "manufactured": "2021",
+      "image": "https://images.pexels.com/photos/29831790/pexels-photo-29831790/free-photo-of-shiny-red-ferrari-sports-car-in-showroom.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
   ]
 }

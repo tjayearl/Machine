@@ -48,12 +48,23 @@ nav ul li a {
 
 .car-card img {
     width: 100%;
-    height: auto;
+    height: 150px;
     border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .car-info {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 button {
@@ -62,7 +73,8 @@ button {
     border: none;
     padding: 10px;
     cursor: pointer;
-    margin-top: 10px;
+    margin: 5px;
+    border-radius: 5px;
 }
 
 button:hover {
