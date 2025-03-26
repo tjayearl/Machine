@@ -3,20 +3,22 @@
     {
       "id": 1,
       "name": "Toyota gt86",
-      "category": "coupe",
+      "category": "sports",
       "color": "Silver",
       "engine": "2.0l 4-cylinder",
       "manufactured": "2011",
-      "image": "https://images.pexels.com/photos/17792978/pexels-photo-17792978/free-photo-of-toyota-gt86-on-parking-lot-in-rain.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/17245097/pexels-photo-17245097/free-photo-of-white-toyota-gt86-on-a-parking-lot.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
     },
     {
       "id": 2,
       "name": "Lamborghini Huracan",
       "category": "sports",
-      "color": "blue",
+      "color": "Blue",
       "engine": "5.2L V10",
       "manufactured": "2023",
-      "image": "https://images.pexels.com/photos/27985078/pexels-photo-27985078/free-photo-of-lamborghini-huracan.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/27985076/pexels-photo-27985076/free-photo-of-lamborghini-huracan.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
     },
     {
       "id": 3,
@@ -25,18 +27,19 @@
       "color": "Blue",
       "engine": "Dual Motor",
       "manufactured": "2024",
-      "image": "https://images.pexels.com/photos/16653735/pexels-photo-16653735/free-photo-of-view-of-a-black-tesla-model-s-on-a-parking-lot.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/16653735/pexels-photo-16653735/free-photo-of-view-of-a-black-tesla-model-s-on-a-parking-lot.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
     },
     {
       "id": 4,
       "name": "Mercedes-Benz S-Class",
-      "category": "luxurious",
+      "category": "luxury",
       "color": "Black",
       "engine": "3.0L Turbo V6",
       "manufactured": "2023",
-      "image": "https://images.pexels.com/photos/20123634/pexels-photo-20123634/free-photo-of-new-mercedes-benz-in-showroom.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/20123634/pexels-photo-20123634/free-photo-of-new-mercedes-benz-in-showroom.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
     }
   ]
 }
-
 

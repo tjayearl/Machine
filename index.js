@@ -16,7 +16,7 @@ function displayCars(cars) {
     carListings.innerHTML = "";
 
     const categories = {};
-    
+
     cars.forEach(car => {
         if (!categories[car.category]) {
             categories[car.category] = [];
@@ -41,6 +41,7 @@ function displayCars(cars) {
                     <p><strong>Engine:</strong> ${car.engine}</p>
                     <p><strong>Manufactured:</strong> ${car.manufactured}</p>
                     <button onclick="deleteCar(${car.id})">Remove</button>
+                    <button onclick="updateCarStatus(${car.id})">${car.inStock ? 'Mark as Sold' : 'Mark as In Stock'}</button>
                 </div>
             `;
             categorySection.appendChild(carCard);
@@ -55,3 +56,21 @@ function deleteCar(id) {
         .then(() => fetchCars())
         .catch(error => console.error("Error deleting car:", error));
 }
+
+function updateCarStatus(id) {
+    fetch(`http://localhost:3000/cars/${id}`)
+        .then(response => response.json())
+        .then(car => {
+            car.inStock = !car.inStock;
+            fetch(`http://localhost:3000/cars/${id}`, {
+                method: "PATCH",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ inStock: car.inStock })
+            })
+            .then(() => fetchCars())
+            .catch(error => console.error("Error updating car status:", error));
+        })
+        .catch(error => console.error("Error fetching car:", error));
+}
+
+
