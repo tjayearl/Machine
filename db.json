@@ -62,6 +62,16 @@
       "engine": "V6 turbo engine",
       "manufactured": "2021",
       "image": "https://images.pexels.com/photos/29831790/pexels-photo-29831790/free-photo-of-shiny-red-ferrari-sports-car-in-showroom.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+
+    {
+      "id": 7,
+      "name": "porsche 992 gt3 rs",
+      "category": "sports",
+      "color": "grey",
+      "engine":"4.oL flat-six",
+      "manufactured": "2022",
+      "image": "https://images.pexels.com/photos/30821414/pexels-photo-30821414/free-photo-of-sleek-modern-sports-car-with-golden-rims.jpeg?auto=compress&cs=tinysrgb&w=600" 
     }
   ]
 }
