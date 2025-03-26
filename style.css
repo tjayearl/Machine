@@ -1,187 +1,71 @@
-/* --- General Styles --- */
-:root {
-    --primary-color: #333; /* Dark gray */
-    --secondary-color: #f4f4f4; /* Light gray */
-    --accent-color: #007bff; /* Blue (for buttons, links) */
-    --text-color: #333;
-    --white-color: #fff;
-    --border-color: #ddd;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-/* --- Header --- */
 header {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    padding: 1rem 0;
+    background-color: royalblue;
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
-/* --- Navigation --- */
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 1rem;
+    margin: 0 10px;
 }
 
 nav ul li a {
-    color: var(--white-color);
+    color: white;
     text-decoration: none;
-    transition: color 0.3s ease; /* Smooth color change on hover */
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: var(--accent-color);
+.car-category {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Main Content --- */
-main {
-    padding: 2rem 0;
-}
-
-/* --- Vehicle Cards --- */
-#vehicles {
+.car-card {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center the cards */
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 8px;
 }
 
-.vehicle-card {
-    background-color: var(--white-color);
-    border: 1px solid var(--border-color);
-    margin: 1rem;
-    padding: 1rem;
-    width: 250px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+.car-card img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
 }
 
-.vehicle-card:hover {
-    transform: translateY(-5px); /* Lift the card slightly on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+.car-info {
+    padding: 10px;
 }
 
-.vehicle-image-container {
-    width: 100%;
-    height: 150px;
-    overflow: hidden;
-    margin-bottom: 1rem;
-}
-
-.vehicle-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.vehicle-details {
-    text-align: left;
-}
-
-.vehicle-title {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.vehicle-description {
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-}
-
-.vehicle-price {
-    font-weight: bold;
-    color: var(--accent-color);
-}
-
-/* --- Form --- */
-form {
-    background-color: var(--white-color);
-    padding: 1.5rem;
-    border: 1px solid var(--border-color);
-    max-width: 400px;
-    margin: 2rem auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    margin-bottom: 1rem;
-}
-
-form label {
-    display: block;
-    margin-bottom: 0.3rem;
-    font-weight: bold;
-}
-
-form input,
-form select,
-form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
-
-/* --- Buttons --- */
-.btn {
-    width: 100%;
-    padding: 0.7rem;
-    background-color: var(--primary-color);
-    color: var(--white-color);
+button {
+    background-color: crimson;
+    color: white;
     border: none;
+    padding: 10px;
     cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
-.btn:hover {
-    background-color: var(--accent-color);
-}
-
-/* --- Footer --- */
-footer {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-}
-
-/* --- Media Queries for Responsiveness --- */
-@media (max-width: 768px) {
-    #vehicles {
-        justify-content: center;
-    }
-
-    .vehicle-card {
-        width: calc(50% - 2rem); /* Two cards per row on medium screens */
-    }
-    form {
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 576px) {
-    .vehicle-card {
-        width: calc(100% - 2rem); /* One card per row on small screens */
-    }
+button:hover {
+    background-color: darkred;
 }

@@ -1,17 +1,42 @@
 {
-    "vehicles": [
-      {
-        "name": "Sedan A",
-        "type": "sedan",
-        "price": 20000,
-        "description": "A comfortable family sedan."
-      },
-      {
-        "name": "Luxury SUV",
-        "type": "suv",
-        "price": 50000,
-        "description": "A luxury SUV with advanced features."
-      }
-    ]
-  }
-  
+  "cars": [
+    {
+      "id": 1,
+      "name": "Toyota gt86",
+      "category": "coupe",
+      "color": "Silver",
+      "engine": "2.0l 4-cylinder",
+      "manufactured": "2011",
+      "image": "https://images.pexels.com/photos/17792978/pexels-photo-17792978/free-photo-of-toyota-gt86-on-parking-lot-in-rain.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 2,
+      "name": "Lamborghini Huracan",
+      "category": "sports",
+      "color": "blue",
+      "engine": "5.2L V10",
+      "manufactured": "2023",
+      "image": "https://images.pexels.com/photos/27985078/pexels-photo-27985078/free-photo-of-lamborghini-huracan.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 3,
+      "name": "Tesla Model S",
+      "category": "electric",
+      "color": "Blue",
+      "engine": "Dual Motor",
+      "manufactured": "2024",
+      "image": "https://images.pexels.com/photos/16653735/pexels-photo-16653735/free-photo-of-view-of-a-black-tesla-model-s-on-a-parking-lot.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 4,
+      "name": "Mercedes-Benz S-Class",
+      "category": "luxurious",
+      "color": "Black",
+      "engine": "3.0L Turbo V6",
+      "manufactured": "2023",
+      "image": "https://images.pexels.com/photos/20123634/pexels-photo-20123634/free-photo-of-new-mercedes-benz-in-showroom.jpeg?auto=compress&cs=tinysrgb&w=600"
+    }
+  ]
+}
+
+

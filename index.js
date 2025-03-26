@@ -1,57 +1,57 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const vehicleList = document.getElementById('vehicle-list');
-    const addVehicleForm = document.getElementById('add-vehicle-form');
+document.addEventListener("DOMContentLoaded", () => {
+    fetchCars();
+});
 
-    // Fetch vehicles from db.json
-    function fetchVehicles() {
-        fetch('db.json')
-            .then(response => response.json())
-            .then(data => {
-                displayVehicles(data.vehicles);
-            });
-    }
-
-    // Display vehicles
-    function displayVehicles(vehicles) {
-        vehicleList.innerHTML = '';
-        vehicles.forEach(vehicle => {
-            const vehicleDiv = document.createElement('div');
-            vehicleDiv.classList.add('vehicle');
-            vehicleDiv.innerHTML = `
-                <h3>${vehicle.name}</h3>
-                <p>Type: ${vehicle.type}</p>
-                <p>Price: $${vehicle.price}</p>
-                <p>${vehicle.description}</p>
-            `;
-            vehicleList.appendChild(vehicleDiv);
-        });
-    }
-
-    // Add new vehicle
-    addVehicleForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const newVehicle = {
-            name: e.target.name.value,
-            type: e.target.type.value,
-            price: e.target.price.value,
-            description: e.target.description.value
-        };
-
-        fetch('db.json', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(newVehicle)
-        })
+function fetchCars() {
+    fetch("http://localhost:3000/cars")
         .then(response => response.json())
-        .then(() => {
-            fetchVehicles();
-            addVehicleForm.reset();
-        });
+        .then(data => {
+            displayCars(data);
+        })
+        .catch(error => console.error("Error fetching cars:", error));
+}
+
+function displayCars(cars) {
+    const carListings = document.getElementById("car-listings");
+    carListings.innerHTML = "";
+
+    const categories = {};
+    
+    cars.forEach(car => {
+        if (!categories[car.category]) {
+            categories[car.category] = [];
+        }
+        categories[car.category].push(car);
     });
 
-    // Initial vehicle load
-    fetchVehicles();
-});
+    for (const category in categories) {
+        const categorySection = document.createElement("section");
+        categorySection.classList.add("car-category");
+        categorySection.id = category;
+        categorySection.innerHTML = `<h2>${category.toUpperCase()}</h2>`;
+
+        categories[category].forEach(car => {
+            const carCard = document.createElement("div");
+            carCard.classList.add("car-card");
+            carCard.innerHTML = `
+                <img src="${car.image}" alt="${car.name}">
+                <div class="car-info">
+                    <h3>${car.name}</h3>
+                    <p><strong>Color:</strong> ${car.color}</p>
+                    <p><strong>Engine:</strong> ${car.engine}</p>
+                    <p><strong>Manufactured:</strong> ${car.manufactured}</p>
+                    <button onclick="deleteCar(${car.id})">Remove</button>
+                </div>
+            `;
+            categorySection.appendChild(carCard);
+        });
+
+        carListings.appendChild(categorySection);
+    }
+}
+
+function deleteCar(id) {
+    fetch(`http://localhost:3000/cars/${id}`, { method: "DELETE" })
+        .then(() => fetchCars())
+        .catch(error => console.error("Error deleting car:", error));
+}
