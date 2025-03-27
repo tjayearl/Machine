@@ -179,6 +179,26 @@
       "manufactured": "2022",
       "image": "https://images.pexels.com/photos/29779244/pexels-photo-29779244/free-photo-of-sleek-black-mercedes-benz-eqs-in-urban-sunset.jpeg?auto=compress&cs=tinysrgb&w=600",
       "inStock": true
+    },
+    {
+      "id": "19",
+      "name": "Tesla model s",
+      "category": "electric",
+      "color": "blue",
+      "engine": "Dual Motor",
+      "manufactured": "2023",
+      "image": "https://images.pexels.com/photos/3954401/pexels-photo-3954401.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
+    },
+    {
+      "id": "20",
+      "name": "Rolls Royce ghost",
+      "category": "luxury",
+      "color": "white",
+      "engine": "6.75L V12",
+      "manufactured": "2012",
+      "image": "https://images.pexels.com/photos/3764984/pexels-photo-3764984.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
     }
   ]
 }
