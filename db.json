@@ -1,7 +1,7 @@
 {
   "cars": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Toyota gt86",
       "category": "most affordable",
       "color": "Silver",
@@ -10,9 +10,8 @@
       "image": "https://images.pexels.com/photos/17245097/pexels-photo-17245097/free-photo-of-white-toyota-gt86-on-a-parking-lot.jpeg?auto=compress&cs=tinysrgb&w=600",
       "inStock": true
     },
-
     {
-      "id": 2,
+      "id": "2",
       "name": "Lamborghini Huracan",
       "category": "sports",
       "color": "Blue",
@@ -21,9 +20,8 @@
       "image": "https://images.pexels.com/photos/27985076/pexels-photo-27985076/free-photo-of-lamborghini-huracan.jpeg?auto=compress&cs=tinysrgb&w=600",
       "inStock": true
     },
-
     {
-      "id": 3,
+      "id": "3",
       "name": "Tesla Model S",
       "category": "electric",
       "color": "Blue",
@@ -32,9 +30,8 @@
       "image": "https://images.pexels.com/photos/16653735/pexels-photo-16653735/free-photo-of-view-of-a-black-tesla-model-s-on-a-parking-lot.jpeg?auto=compress&cs=tinysrgb&w=600",
       "inStock": true
     },
-
     {
-      "id": 4,
+      "id": "4",
       "name": "Mercedes-Benz S-Class",
       "category": "luxury",
       "color": "Black",
@@ -43,19 +40,18 @@
       "image": "https://images.pexels.com/photos/20123634/pexels-photo-20123634/free-photo-of-new-mercedes-benz-in-showroom.jpeg?auto=compress&cs=tinysrgb&w=600",
       "inStock": true
     },
-
     {
-      "id": 5,
+      "id": "5",
       "name": "Toyota land cruiser",
       "category": "SUV",
       "color": "brown",
       "engine": "4.6L V8",
       "manufactured": "2023",
-      "image": "https://images.pexels.com/photos/18029616/pexels-photo-18029616/free-photo-of-brown-toyota-land-cruiser.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/18029616/pexels-photo-18029616/free-photo-of-brown-toyota-land-cruiser.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
     },
-
     {
-      "id": 6,
+      "id": "6",
       "name": "Ferrari 296 GTB",
       "category": "sports",
       "color": "Red",
@@ -63,16 +59,41 @@
       "manufactured": "2021",
       "image": "https://images.pexels.com/photos/29831790/pexels-photo-29831790/free-photo-of-shiny-red-ferrari-sports-car-in-showroom.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
-
     {
-      "id": 7,
+      "id": "7",
       "name": "porsche 992 gt3 rs",
       "category": "sports",
       "color": "grey",
-      "engine":"4.oL flat-six",
+      "engine": "4.oL flat-six",
       "manufactured": "2022",
-      "image": "https://images.pexels.com/photos/30821414/pexels-photo-30821414/free-photo-of-sleek-modern-sports-car-with-golden-rims.jpeg?auto=compress&cs=tinysrgb&w=600" 
+      "image": "https://images.pexels.com/photos/30821414/pexels-photo-30821414/free-photo-of-sleek-modern-sports-car-with-golden-rims.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "8",
+      "name": "mercedes benz A-class",
+      "category": "hatchback",
+      "color": "Blue",
+      "engine": "1.3L Turbo",
+      "manufactured": "2014",
+      "image": "https://images.pexels.com/photos/810357/pexels-photo-810357.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "9",
+      "name": "BMW M5",
+      "category": "sports",
+      "color": "green",
+      "engine": "4.4L V8",
+      "manufactured": "2019",
+      "image": "https://images.pexels.com/photos/17888840/pexels-photo-17888840/free-photo-of-a-blue-bmw-m5-parked-on-a-street-at-night.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "10",
+      "name": "Audi RS7",
+      "category": "sedan",
+      "color": "red",
+      "engine": "4.0L V8",
+      "manufactured": "2024",
+      "image": "https://images.pexels.com/photos/8634582/pexels-photo-8634582.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
   ]
 }
-
