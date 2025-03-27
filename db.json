@@ -92,8 +92,35 @@
       "category": "sedan",
       "color": "red",
       "engine": "4.0L V8",
-      "manufactured": "2024",
-      "image": "https://images.pexels.com/photos/8634582/pexels-photo-8634582.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "manufactured": "2022",
+      "image":"https://images.pexels.com/photos/8634582/pexels-photo-8634582.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "11",
+      "name": "Hyundai i20 n",
+      "category": "hatchback",
+      "color": "white",
+      "engine": "1.6L Turbo",
+      "manufactured": "2020",
+      "image": "https://images.pexels.com/photos/9846085/pexels-photo-9846085.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "12",
+      "name": "kia venga",
+      "category": "hatchback",
+      "color": "white",
+      "engine": "1.4l petrol",
+      "manufactured": "2020",
+      "image": "https://images.pexels.com/photos/7290405/pexels-photo-7290405.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "13",
+      "name": "golf gti",
+      "category": "hatchback",
+      "color": "blue",
+      "engine": "2.0l inline-4",
+      "manufactured": "2023",
+      "image": "https://images.pexels.com/photos/20869390/pexels-photo-20869390/free-photo-of-view-of-a-parked-volkswagen-golf-vii-gti.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
   ]
 }
