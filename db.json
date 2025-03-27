@@ -57,7 +57,8 @@
       "color": "Red",
       "engine": "V6 turbo engine",
       "manufactured": "2021",
-      "image": "https://images.pexels.com/photos/29831790/pexels-photo-29831790/free-photo-of-shiny-red-ferrari-sports-car-in-showroom.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/29831790/pexels-photo-29831790/free-photo-of-shiny-red-ferrari-sports-car-in-showroom.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
     },
     {
       "id": "7",
@@ -66,7 +67,8 @@
       "color": "grey",
       "engine": "4.oL flat-six",
       "manufactured": "2022",
-      "image": "https://images.pexels.com/photos/30821414/pexels-photo-30821414/free-photo-of-sleek-modern-sports-car-with-golden-rims.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/30821414/pexels-photo-30821414/free-photo-of-sleek-modern-sports-car-with-golden-rims.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
     },
     {
       "id": "8",
@@ -75,7 +77,8 @@
       "color": "Blue",
       "engine": "1.3L Turbo",
       "manufactured": "2014",
-      "image": "https://images.pexels.com/photos/810357/pexels-photo-810357.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/810357/pexels-photo-810357.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
     },
     {
       "id": "9",
@@ -84,7 +87,8 @@
       "color": "green",
       "engine": "4.4L V8",
       "manufactured": "2019",
-      "image": "https://images.pexels.com/photos/17888840/pexels-photo-17888840/free-photo-of-a-blue-bmw-m5-parked-on-a-street-at-night.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/17888840/pexels-photo-17888840/free-photo-of-a-blue-bmw-m5-parked-on-a-street-at-night.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
     },
     {
       "id": "10",
@@ -93,7 +97,8 @@
       "color": "red",
       "engine": "4.0L V8",
       "manufactured": "2022",
-      "image":"https://images.pexels.com/photos/8634582/pexels-photo-8634582.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image":"https://images.pexels.com/photos/8634582/pexels-photo-8634582.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
     },
     {
       "id": "11",
@@ -102,7 +107,8 @@
       "color": "white",
       "engine": "1.6L Turbo",
       "manufactured": "2020",
-      "image": "https://images.pexels.com/photos/9846085/pexels-photo-9846085.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/9846085/pexels-photo-9846085.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
     },
     {
       "id": "12",
@@ -111,7 +117,8 @@
       "color": "white",
       "engine": "1.4l petrol",
       "manufactured": "2020",
-      "image": "https://images.pexels.com/photos/7290405/pexels-photo-7290405.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/7290405/pexels-photo-7290405.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
     },
     {
       "id": "13",
@@ -120,7 +127,8 @@
       "color": "blue",
       "engine": "2.0l inline-4",
       "manufactured": "2023",
-      "image": "https://images.pexels.com/photos/20869390/pexels-photo-20869390/free-photo-of-view-of-a-parked-volkswagen-golf-vii-gti.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/20869390/pexels-photo-20869390/free-photo-of-view-of-a-parked-volkswagen-golf-vii-gti.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
     },
     {
       "id": "14",
@@ -129,7 +137,48 @@
       "color": "red",
       "engine": "1.0l petrol",
       "manufactured": "2017",
-      "image": "https://images.pexels.com/photos/19922984/pexels-photo-19922984/free-photo-of-red-dacia-duster-left-on-the-roadside.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/19922984/pexels-photo-19922984/free-photo-of-red-dacia-duster-left-on-the-roadside.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
+    },
+    {
+      "id": "15",
+      "name": "smart fortwo",
+      "category": "most affordable",
+      "color": "blue",
+      "engine": "1.0l 3-cylinder",
+      "manufactured": "2019",
+      "image": "https://images.pexels.com/photos/18379620/pexels-photo-18379620/free-photo-of-blue-smart-forfour.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
+    },
+    {
+      "id": "16",
+      "name": "Toyota RAV4",
+      "category": "most affordable",
+      "color": "Silver", 
+      "engine": "2.5L 4-cylinder",
+      "manufactured": "2018",
+      "image": "https://images.pexels.com/photos/2036544/pexels-photo-2036544.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true    
+    },
+    {
+      "id": "17",
+      "name": "Audi e-tron",
+      "category": "electric",
+      "color": "silver",
+      "engine": "Dual Motor",
+      "manufactured": "2020",
+      "image": "https://images.pexels.com/photos/9452202/pexels-photo-9452202.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
+    },
+    {
+      "id": "18",
+      "name": "mercedes eqs",
+      "category": "electric",
+      "color": "black",
+      "engine": "Dual Motor",
+      "manufactured": "2022",
+      "image": "https://images.pexels.com/photos/29779244/pexels-photo-29779244/free-photo-of-sleek-black-mercedes-benz-eqs-in-urban-sunset.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
     }
   ]
 }
