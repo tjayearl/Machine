@@ -121,6 +121,15 @@
       "engine": "2.0l inline-4",
       "manufactured": "2023",
       "image": "https://images.pexels.com/photos/20869390/pexels-photo-20869390/free-photo-of-view-of-a-parked-volkswagen-golf-vii-gti.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "14",
+      "name": "dacia logan",
+      "category": "most affordable",
+      "color": "red",
+      "engine": "1.0l petrol",
+      "manufactured": "2017",
+      "image": "https://images.pexels.com/photos/19922984/pexels-photo-19922984/free-photo-of-red-dacia-duster-left-on-the-roadside.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
   ]
 }
