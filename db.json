@@ -229,6 +229,56 @@
       "manufactured": "2021",
       "image": "https://images.pexels.com/photos/29999371/pexels-photo-29999371/free-photo-of-luxury-land-rover-defender-in-milan.jpeg?auto=compress&cs=tinysrgb&w=600",
       "inStock": true 
+    },
+    {
+      "id": "24",
+      "name": "caddilac escalade",
+      "category": "SUV",
+      "color": "white",
+      "engine": "6.2L V8",
+      "manufactured": "2019",
+      "image": "https://images.pexels.com/photos/18441129/pexels-photo-18441129/free-photo-of-cadillac-escalade-by-puddle-at-night.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
+    },
+    {
+      "id": "25",
+      "name": "mercedes g-class",
+      "category": "luxury",
+      "color": "brown",
+      "engine": "4.0L V8",
+      "manufactured": "2018",
+      "image": "https://images.pexels.com/photos/164654/pexels-photo-164654.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
+    },
+    {
+      "id": "26",
+      "name": "BMW 320d",
+      "category": "sedan",
+      "color": "blue",
+      "engine": "2.0L 4-cylinder",
+      "manufactured": "2014",
+      "image": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
+    },
+    {
+      "id": "27",
+      "name": "saab 9-3",
+      "category": "sedan",
+      "color": "grey",
+      "engine": "2.8L V6",
+      "manufactured": "2008",
+      "image": "https://images.pexels.com/photos/218719/pexels-photo-218719.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
+    },
+    {
+      "id": "28",
+      "name": "caddilac ct4",
+      "category": "sedan",
+      "color": "blue",
+      "engine": "2.7L 4-cylinder",
+      "manufactured": "2022",
+      "image": "https://images.pexels.com/photos/27404360/pexels-photo-27404360/free-photo-of-cadillac-ct5-v-blackwing.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "inStock": true
     }
   ]
 }
