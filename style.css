@@ -1,47 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in width and height */
+}
+
+/* Body Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: wheat;
-    color: royalblue;
-    padding: 20px;
+    background-color: royalblue;
+    color: white; /* Fixed color to white for contrast */
+    padding: 40px;
     text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
-/* General Text Styles */
-p {
-    font-size: 1.2em;
-    line-height: 1.6;
+header h1 {
+    font-size: 2.5em;
     margin-bottom: 20px;
-    color: black;
-}
-
-/* Specific Styles for Each Text */
-.intro-text {
-    color: black;
-    font-weight: bold;
-    text-align: center;
-}
-
-.secondary-text {
-    color: black;
-    text-align: center;
-}
-
-.highlighted-text {
-    color: black;
-    font-weight: bold;
-    text-align: center;
-}
-
-.call-to-action {
-    color: black;
-    font-style: italic;
-    text-align: center;
+    letter-spacing: 2px;
 }
 
 nav ul {
@@ -52,26 +35,49 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1em;
+    transform: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: lightblue;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
 }
 
 .car-category {
     margin: 20px;
     padding: 20px;
-    background-color: 
-    border-radius 10px;
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-radius: 10px; /* Fixed missing colon */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .car-card {
     width: 250px;
-    height: auto;
+    height: 350px;
     border: 1px solid black;
     padding: 10px;
     text-align: center;
@@ -79,27 +85,34 @@ nav ul li a {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
     border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .car-card img {
     width: 100%;
-    height: 150px;
+    height: 180px;
     border-radius: 5px;
     object-fit: cover;
     object-position: center;
+    transition: transform 0.3s ease;
 }
 
 .car-info {
-    padding: 10px;
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .button-container {
     display: flex;
     justify-content: center;
-    width: 100%;
+    margin-top: auto;
 }
 
 button {
@@ -117,8 +130,7 @@ button:hover {
 }
 
 .car-card:hover img {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
+    transform: scale(1.05);
 }
 
 .car-category {
@@ -126,13 +138,6 @@ button:hover {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 20px;
-}
-
-.car-card img {
-    width: 250px;
-    height: 180px;
-    object-fit: cover;
-    display: block;
 }
 
 .car-card h3 {
@@ -147,17 +152,26 @@ button:hover {
 
 /* Footer Styles */
 footer {
-    background-color: grey;
+    background-color: #343a40;
+    color: white;
     padding: 20px;
     text-align: center;
+    margin-top: 40px;
 }
 
-.social-icons a img {
-    width: 30px;
+footer.social-icons a {
+    display: inline-block;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+footer.social-icons a img {
+    width: 15px;
+    margin: 15px;
     margin: 0 10px;
     transition: transform 0.3s ease;
 }
 
-.social-icons a img:hover {
+footer.social-icons a:hover {
     transform: scale(1.2);
 }
