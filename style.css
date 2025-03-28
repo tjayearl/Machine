@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: white;
     margin: 0;
     padding: 0;
 }
@@ -55,7 +55,6 @@ nav ul li a {
     border-radius: 5px;
     object-fit: cover;
     object-position: center;
-    border-radius: 3opx;
 }
 
 .car-info {
@@ -89,18 +88,19 @@ button:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
+
 .car-category {
     display: flex;
-    flex-wrap: wrap; /* Allow images to move to new rows */
-    justify-content: flex-start; /* Center images */
-    gap: 20px; /* Add spacing between images */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
 }
 
 .car-card img {
-    width: 250px; /* Medium size */
-    height: 180px; /* Maintain aspect ratio */
-    object-fit: cover; /* Maintain aspect ratio */
-    display: block; /* Prevent inline spacing issues */
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
 }
 
 .car-card h3 {
@@ -111,4 +111,21 @@ button:hover {
     padding: 5px;
     border-radius: 5px;
     text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    background-color: grey;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-icons a img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
 }
