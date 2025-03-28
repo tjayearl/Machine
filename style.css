@@ -77,7 +77,7 @@ nav ul li a:hover {
 
 .car-card {
     width: 250px;
-    height: 350px;
+    height: 380px;
     border: 1px solid black;
     padding: 10px;
     text-align: center;
@@ -117,16 +117,19 @@ nav ul li a:hover {
 
 button {
     background-color: crimson;
-    color: black;
+    color: white;
     border: none;
-    padding: 10px;
+    padding: 12px 25px;
+    font-size: 1.1em;
     cursor: pointer;
     margin: 5px;
     border-radius: 5px;
+    transition: bakground-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
     background-color: blueviolet;
+    transform: scale(1.05);
 }
 
 .car-card:hover img {

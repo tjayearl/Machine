@@ -40,10 +40,10 @@ function displayCars(cars) {
                     <p><strong>Color:</strong> ${car.color}</p>
                     <p><strong>Engine:</strong> ${car.engine}</p>
                     <p><strong>Manufactured:</strong> ${car.manufactured}</p>
-                    <p><strong>Price:</strong> $${car.price}</p> <!-- ✅ Added price here -->
+                    <p><strong>Price:</strong> $${car.price}</p>
                     <div class="button-container">
-                        <button onclick="deleteCar(${car.id})">Remove</button>
-                        <button onclick="updateCarStatus(${car.id})">${car.inStock ? 'Mark as Sold' : 'Mark as In Stock'}</button>
+                        <button onclick="deleteCar(${car.id})">Buy</button>
+                        <button onclick="updateCarStatus(${car.id})">${car.inStock ? 'Rent' : 'Available'}</button>
                     </div>
                 </div>
             `;
