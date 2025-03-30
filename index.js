@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function fetchCars() {
-    fetch("http://localhost:3000/cars")
+    fetch("https://machine-lac.vercel.app/")
         .then(response => response.json())
         .then(data => {
             displayCars(data);
@@ -31,10 +31,13 @@ function displayCars(cars) {
         categorySection.innerHTML = `<h2>${category.toUpperCase()}</h2>`;
 
         categories[category].forEach(car => {
+            // Log image URL to check for correctness
+            console.log("Car Image URL:", car.image);
+
             const carCard = document.createElement("div");
             carCard.classList.add("car-card");
             carCard.innerHTML = `
-                <img src="${car.image}" alt="${car.name}">
+                <img src="${car.image}" alt="${car.name || 'Car Image'}">  <!-- Fallback alt text -->
                 <div class="car-info">
                     <h3>${car.name}</h3>
                     <p><strong>Color:</strong> ${car.color}</p>
@@ -55,17 +58,17 @@ function displayCars(cars) {
 }
 
 function buyCar(id) {
-    fetch(`http://localhost:3000/cars/${id}`, { method: "DELETE" })
+    fetch(`https://machine-lac.vercel.app//cars/${id}`, { method: "DELETE" })
         .then(() => fetchCars())
         .catch(error => console.error("Error deleting car:", error));
 }
 
 function updateCarStatus(id) {
-    fetch(`http://localhost:3000/cars/${id}`)
+    fetch(`https://machine-lac.vercel.app//cars/${id}`)
         .then(response => response.json())
         .then(car => {
             car.inStock = !car.inStock;
-            fetch(`http://localhost:3000/cars/${id}`, {
+            fetch(`https://machine-lac.vercel.app//cars/${id}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ inStock: car.inStock })
