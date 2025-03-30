@@ -2,10 +2,19 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchCars();
 });
 
+const API_URL = "https://car4hire-coral.vercel.app/cars";       
+
+
 function fetchCars() {
-    fetch("https://machine-lac.vercel.app/")
-        .then(response => response.json())
+    fetch(API_URL)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(data => {
+            console.log("Fetched cars:", data); // Debugging log
             displayCars(data);
         })
         .catch(error => console.error("Error fetching cars:", error));
@@ -13,6 +22,10 @@ function fetchCars() {
 
 function displayCars(cars) {
     const carListings = document.getElementById("car-listings");
+    if (!carListings) {
+        console.error("Error: #car-listings element not found");
+        return;
+    }
     carListings.innerHTML = ""; // Clear any existing content
 
     const categories = {};
@@ -31,50 +44,64 @@ function displayCars(cars) {
         categorySection.innerHTML = `<h2>${category.toUpperCase()}</h2>`;
 
         categories[category].forEach(car => {
-            // Log image URL to check for correctness
-            console.log("Car Image URL:", car.image);
+            console.log("Car Image URL:", car.image); // Debugging log for images
 
             const carCard = document.createElement("div");
             carCard.classList.add("car-card");
             carCard.innerHTML = `
-                <img src="${car.image}" alt="${car.name || 'Car Image'}">  <!-- Fallback alt text -->
+                <img src="${car.image}" alt="${car.name || 'Car Image'}" onerror="this.src='default-car.jpg'"> 
                 <div class="car-info">
-                    <h3>${car.name}</h3>
-                    <p><strong>Color:</strong> ${car.color}</p>
-                    <p><strong>Engine:</strong> ${car.engine}</p>
-                    <p><strong>Manufactured:</strong> ${car.manufactured}</p>
-                    <p><strong>Price:</strong> $${car.price}</p>
+                    <h3>${car.name || 'Unknown Model'}</h3>
+                    <p><strong>Color:</strong> ${car.color || 'N/A'}</p>
+                    <p><strong>Engine:</strong> ${car.engine || 'N/A'}</p>
+                    <p><strong>Manufactured:</strong> ${car.manufactured || 'N/A'}</p>
+                    <p><strong>Price:</strong> $${car.price || 'N/A'}</p>
                     <div class="button-container">
                         <button onclick="buyCar(${car.id})">Buy</button>
-                        <button onclick="updateCarStatus(${car.id})">${car.inStock ? 'Rent' : 'Available'}</button>
+                        <button onclick="updateCarStatus(${car.id})">
+                            ${car.inStock ? 'Rent' : 'Available'}
+                        </button>
                     </div>
                 </div>
             `;
             categorySection.appendChild(carCard);
         });
-
         carListings.appendChild(categorySection);
     }
 }
 
 function buyCar(id) {
-    fetch(`https://machine-lac.vercel.app//cars/${id}`, { method: "DELETE" })
-        .then(() => fetchCars())
+    fetch(`${API_URL}/${id}`, { method: "DELETE" })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(() => {
+            console.log(`Car with ID ${id} deleted.`);
+            fetchCars();
+        })
         .catch(error => console.error("Error deleting car:", error));
 }
 
 function updateCarStatus(id) {
-    fetch(`https://machine-lac.vercel.app//cars/${id}`)
+    fetch(`${API_URL}/${id}`)
         .then(response => response.json())
         .then(car => {
-            car.inStock = !car.inStock;
-            fetch(`https://machine-lac.vercel.app//cars/${id}`, {
+            const updatedCar = { inStock: !car.inStock };
+            return fetch(`${API_URL}/${id}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ inStock: car.inStock })
-            })
-            .then(() => fetchCars())
-            .catch(error => console.error("Error updating car status:", error));
+                body: JSON.stringify(updatedCar)
+            });
         })
-        .catch(error => console.error("Error fetching car:", error));
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            console.log(`Car status updated for ID ${id}.`);
+            fetchCars();
+        })
+        .catch(error => console.error("Error updating car status:", error));
 }
