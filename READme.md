@@ -1,68 +1,63 @@
-# Project Name
+# Machines: Buy and Sell Cars
 
-**[Briefly describe your project here. What does it do? What problem does it solve?]**
+## Overview
+The **Machines** website allows users to buy and sell cars, including tractors, sedans, SUVs, luxury cars, and sports cars. It is a simple, user-friendly platform that allows people to post vehicles for sale, browse available cars, and manage their listings. The site includes CRUD operations (Create, Read, Update, and Delete) for managing vehicle listings, and it leverages modern JavaScript techniques, including Fetch API, event listeners, and DOM manipulation.
 
-## Table of Contents
+## Features
+- **Buy and Sell Cars:** Users can browse a variety of cars for sale and add new cars to the marketplace.
+- **CRUD Operations:** Includes the ability to add, update, and delete car listings.
+- **Interactive Interface:** Dynamic updates and interactions, such as form submissions and list management.
 
-- [Description](#description)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+## Technologies Used
+- **HTML**: Structure and content of the website.
+- **CSS**: Styling and layout of the website.
+- **JavaScript**: For handling CRUD operations and dynamic DOM updates.
+- **Fetch API**: To communicate with the back-end and handle data from `db.json`.
+- **Vercel**: Deployed the website for easy access and sharing.
 
-## Description
+## Installation
+To get a local copy of this project up and running, follow these steps:
 
-**[Provide a more detailed explanation of your project.  Elaborate on its features, functionality, and purpose.  Include any relevant background information.]**
-
-## Getting Started
-
-**[Explain how to get the project up and running. This section is crucial for users who want to try out your project.]**
-
-### Prerequisites
-
-**[List any software, libraries, or tools that are required to run the project. Include version numbers if necessary.]**
-
-*   Example: Python 3.8+
-*   Example: Node.js 14+
-*   Example: Git
-
-### Installation
-
-**[Provide step-by-step instructions on how to install the project.  Use code blocks for commands.]**
-
-1.  Clone the repository:
+1. **Clone the repository** to your local machine:
 
     ```bash
-    git clone [repository URL]
+    git clone https://github.com/tjayearl/machines.git
     ```
 
-2.  Navigate to the project directory:
+2. **Navigate into the project folder:**
 
     ```bash
-    cd [project directory]
+    cd machines
     ```
 
-3.  Install dependencies:
+3. **Install dependencies** (if necessary):
 
     ```bash
-    # Example for Python
-    pip install -r requirements.txt
-
-    # Example for Node.js
     npm install
     ```
 
-4. **[Add any other installation steps]**
+4. **Run the project** locally:
 
-## Usage
+    Open the `index.html` file in your browser to view the website.
 
-**[Explain how to use the project. Provide examples and code snippets to illustrate common use cases.]**
+## Features to be added
+- User authentication (log in and register)
+- Advanced search filters for cars
+- Additional forms and styling improvements
 
-```python
-# Example Python code
-import my_project
+## Deployed Version
+You can access the live version of the website here: [Machine-LAC on Vercel](https://machine-lac.vercel.app/).
 
-my_project.do_something()
+## Contributing
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a pull request
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+- Inspiration from various car buying/selling platforms
+- Special thanks to Vercel for easy deployment

@@ -106,7 +106,7 @@
       "color": "red",
       "engine": "4.0L V8",
       "manufactured": "2022",
-      "image":"https://images.pexels.com/photos/8634582/pexels-photo-8634582.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "image": "https://images.pexels.com/photos/8634582/pexels-photo-8634582.jpeg?auto=compress&cs=tinysrgb&w=600",
       "inStock": true,
       "price": 12000
     },
@@ -169,12 +169,12 @@
       "id": "16",
       "name": "Toyota RAV4",
       "category": "most affordable",
-      "color": "Silver", 
+      "color": "Silver",
       "engine": "2.5L 4-cylinder",
       "manufactured": "2018",
       "image": "https://images.pexels.com/photos/2036544/pexels-photo-2036544.jpeg?auto=compress&cs=tinysrgb&w=600",
       "inStock": true,
-      "price": 6000    
+      "price": 6000
     },
     {
       "id": "17",
@@ -252,7 +252,6 @@
       "image": "https://images.pexels.com/photos/29999371/pexels-photo-29999371/free-photo-of-luxury-land-rover-defender-in-milan.jpeg?auto=compress&cs=tinysrgb&w=600",
       "inStock": true,
       "price": 18000
-     
     },
     {
       "id": "24",
@@ -308,7 +307,6 @@
       "image": "https://images.pexels.com/photos/27404360/pexels-photo-27404360/free-photo-of-cadillac-ct5-v-blackwing.jpeg?auto=compress&cs=tinysrgb&w=600",
       "inStock": true,
       "price": 18000
-    
     }
   ]
 }
