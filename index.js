@@ -13,7 +13,7 @@ function fetchCars() {
 
 function displayCars(cars) {
     const carListings = document.getElementById("car-listings");
-    carListings.innerHTML = "";
+    carListings.innerHTML = ""; // Clear any existing content
 
     const categories = {};
 
@@ -42,7 +42,7 @@ function displayCars(cars) {
                     <p><strong>Manufactured:</strong> ${car.manufactured}</p>
                     <p><strong>Price:</strong> $${car.price}</p>
                     <div class="button-container">
-                        <button onclick="deleteCar(${car.id})">Buy</button>
+                        <button onclick="buyCar(${car.id})">Buy</button>
                         <button onclick="updateCarStatus(${car.id})">${car.inStock ? 'Rent' : 'Available'}</button>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ function displayCars(cars) {
     }
 }
 
-function deleteCar(id) {
+function buyCar(id) {
     fetch(`http://localhost:3000/cars/${id}`, { method: "DELETE" })
         .then(() => fetchCars())
         .catch(error => console.error("Error deleting car:", error));

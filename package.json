@@ -1,5 +1,27 @@
 {
   "dependencies": {
-    "dotenv": "^16.4.7"
-  }
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "lowdb": "^7.0.1"
+  },
+  "name": "machine",
+  "version": "1.0.0",
+  "description": "## Overview The **Machines** website allows users to buy and sell cars, including tractors, sedans, SUVs, luxury cars, and sports cars. It is a simple, user-friendly platform that allows people to post vehicles for sale, browse available cars, and manage their listings. The site includes CRUD operations (Create, Read, Update, and Delete) for managing vehicle listings, and it leverages modern JavaScript techniques, including Fetch API, event listeners, and DOM manipulation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjayearl/Machine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tjayearl/Machine/issues"
+  },
+  "homepage": "https://github.com/tjayearl/Machine#readme"
 }
