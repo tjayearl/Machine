@@ -116,12 +116,17 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 button:hover {
     transform: scale(1.1);
-    background-color: red;
+    background-color: #0033a0;
+}
+
+button:active {
+    transform: scale(1.05);
+    background-color: #002277;
 }
 
 button:disabled {
@@ -138,11 +143,15 @@ button:disabled {
     display: inline-block;
     margin: 0 10px;
     transition: transform 0.2s ease-in-out;
-    font-size: 20px;
 }
 
 .social-icons a:hover {
     transform: scale(1.2);
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
 }
 
 footer {
