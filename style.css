@@ -192,6 +192,25 @@ footer {
     color: #a0a0a0;
 }
 
+.car-card.sold {
+    opacity: 0.6;
+    filter: grayscale(80%);
+    pointer-events: none; /* Prevents interaction with sold cards */
+}
+
+.car-card.sold:hover {
+    transform: none; /* Disable hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Reset shadow */
+}
+
+.sold-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #c0392b;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
 @media (max-width: 768px) {
     .car-card {
         flex-direction: column;

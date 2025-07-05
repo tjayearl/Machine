@@ -48,8 +48,20 @@ function displayCars(cars) {
 
             const carCard = document.createElement("div");
             carCard.classList.add("car-card");
+
+            if (car.status === 'sold') {
+                carCard.classList.add('sold');
+            }
+
+            const buttonContent = car.status === 'sold'
+                ? `<p class="sold-text">SOLD</p>`
+                : `<button onclick="buyCar(${car.id})">Buy</button>
+                   <button onclick="updateCarStatus(${car.id})">
+                       ${car.inStock ? 'Rent' : 'Available'}
+                   </button>`;
+
             carCard.innerHTML = `
-                <img src="${car.image}" alt="${car.name || 'Car Image'}" onerror="this.src='default-car.jpg'"> 
+                <img src="${car.image}" alt="${car.name || 'Car Image'}" onerror="this.src='default-car.jpg'">
                 <div class="car-info">
                     <h3>${car.name || 'Unknown Model'}</h3>
                     <p><strong>Color:</strong> ${car.color || 'N/A'}</p>
@@ -57,10 +69,7 @@ function displayCars(cars) {
                     <p><strong>Manufactured:</strong> ${car.manufactured || 'N/A'}</p>
                     <p><strong>Price:</strong> $${car.price || 'N/A'}</p>
                     <div class="button-container">
-                        <button onclick="buyCar(${car.id})">Buy</button>
-                        <button onclick="updateCarStatus(${car.id})">
-                            ${car.inStock ? 'Rent' : 'Available'}
-                        </button>
+                        ${buttonContent}
                     </div>
                 </div>
             `;
@@ -71,18 +80,8 @@ function displayCars(cars) {
 }
 
 function buyCar(id) {
-    fetch(`${API_URL}/${id}`, { method: "DELETE" })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(() => {
-            console.log(`Car with ID ${id} deleted.`);
-            fetchCars();
-        })
-        .catch(error => console.error("Error deleting car:", error));
+    // Redirect to the checkout page with the car's ID
+    window.location.href = `checkout.html?carId=${id}`;
 }
 
 function updateCarStatus(id) {
