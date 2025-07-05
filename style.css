@@ -67,9 +67,8 @@ h2 {
 }
 
 .car-category {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 20px;
     padding: 40px;
     background: #242424;
@@ -95,8 +94,7 @@ h2 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     padding: 20px;
-    margin: 10px;
-    width: 220px;
+    /* The grid container now handles width and spacing */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -130,6 +128,8 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-grow: 1; /* Allows this container to grow to fill the card */
+    width: 100%;   /* Ensures the info container uses the full card width */
 }
 
 button {
