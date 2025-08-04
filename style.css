@@ -236,6 +236,54 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Reset shadow */
 }
 
+/* Checkout Page Styles */
+.checkout-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+#checkout-car-details-wrapper,
+#checkout-form-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background: #242424;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+#checkout-form-container h3 {
+    margin-top: 0;
+    color: #c0392b;
+}
+
+#checkout-form input,
+#checkout-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #e0e0e0;
+    box-sizing: border-box; /* Important for padding and width */
+}
+
+#checkout-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#checkout-form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+}
+
 .sold-text {
     font-size: 1.5em;
     font-weight: bold;

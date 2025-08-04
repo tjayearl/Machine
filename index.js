@@ -129,10 +129,7 @@ function displayCars(cars) {
 
             const buttonContent = car.status === 'sold'
                 ? `<p class="sold-text">SOLD</p>`
-                : `<button onclick="buyCar(${car.id})">Buy</button>
-                   <button onclick="updateCarStatus(${car.id})">
-                       ${car.inStock ? 'Rent' : 'Available'}
-                   </button>`;
+                : `<button onclick="buyCar(${car.id})">Checkout</button>`;
 
             carCard.innerHTML = `
                 <img src="${car.image}" alt="${car.name || 'Car Image'}" onerror="this.src='default-car.jpg'">

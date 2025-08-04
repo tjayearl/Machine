@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Machines</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <div class="checkout-container">
+            <div id="checkout-car-details-wrapper">
+                <h2>Your Selection</h2>
+                <div id="checkout-car-details">
+                    <!-- Car details will be loaded here by JavaScript -->
+                    <p>Loading car details...</p>
+                </div>
+            </div>
+            <div id="checkout-form-container">
+                <h3>Complete Your Purchase</h3>
+                <form id="checkout-form">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <textarea placeholder="Additional Comments"></textarea>
+                    <button type="submit">Complete Purchase</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; 2025 Tjay Earl. All Rights Reserved.</p>
+    </footer>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
