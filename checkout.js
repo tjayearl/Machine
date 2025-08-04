@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const creditCardInputs = creditCardInfo.querySelectorAll('input');
     const paymentMethodButtons = document.querySelectorAll('.payment-method-btn');
     const hiddenPaymentMethodInput = document.getElementById('payment-method-input');
+    let currentCar = null; // To hold the fetched car data
 
     const getCarIdFromUrl = () => {
         const params = new URLSearchParams(window.location.search);
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 return response.json();
             })
             .then(car => {
+                currentCar = car; // Store car details for later use
                 displayCarDetails(car);
             })
             .catch(error => {
@@ -93,9 +95,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     checkoutForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        // In a real application, you would process the payment here.
-        alert("Thank you for your purchase! (This is a demo)");
-        window.location.href = "index.html"; // Redirect back to home
+
+        if (!currentCar) {
+            alert("Error: Car details are not available. Please try again.");
+            return;
+        }
+
+        const formData = new FormData(checkoutForm);
+
+        // Gather all data for the receipt
+        const receiptData = {
+            orderNumber: `ORD-${Date.now()}`,
+            orderDate: new Date().toLocaleString(),
+            car: currentCar,
+            user: {
+                name: formData.get('fullName'),
+                email: formData.get('email'),
+                phone: formData.get('phone')
+            },
+            summary: {
+                subtotal: document.getElementById('summary-subtotal').textContent,
+                tax: document.getElementById('summary-tax').textContent,
+                total: document.getElementById('summary-total').textContent
+            },
+            paymentMethod: hiddenPaymentMethodInput.value.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())
+        };
+
+        // Store data in localStorage to pass to the receipt page
+        localStorage.setItem('purchaseReceipt', JSON.stringify(receiptData));
+
+        // Redirect to the receipt page
+        window.location.href = 'receipt.html';
     });
 
     const carId = getCarIdFromUrl();

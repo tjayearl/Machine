@@ -400,3 +400,29 @@ footer {
         margin: 10px 0;
     }
 }
+
+/* Receipt Page Styles */
+.receipt-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 40px;
+    background: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.receipt-header {
+    text-align: center;
+    border-bottom: 2px solid #c0392b;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.receipt-header h1 {
+    margin: 0;
+    color: #c0392b;
+}
+
+.receipt-section {
+    margin

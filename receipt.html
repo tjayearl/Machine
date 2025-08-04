@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Receipt - Machines</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="content">
+        <div class="receipt-container">
+            <header class="receipt-header">
+                <h1>Purchase Receipt</h1>
+                <p>Thank you for your business!</p>
+            </header>
+
+            <section class="receipt-section" id="order-details">
+                <h2>Order Details</h2>
+                <p><strong>Order #:</strong> <span id="receipt-order-number"></span></p>
+                <p><strong>Date:</strong> <span id="receipt-order-date"></span></p>
+            </section>
+
+            <section class="receipt-section" id="customer-info">
+                <h2>Customer Information</h2>
+                <p><strong>Name:</strong> <span id="receipt-customer-name"></span></p>
+                <p><strong>Email:</strong> <span id="receipt-customer-email"></span></p>
+                <p><strong>Phone:</strong> <span id="receipt-customer-phone"></span></p>
+            </section>
+
+            <section class="receipt-section" id="vehicle-purchased">
+                <h2>Vehicle Purchased</h2>
+                <div id="receipt-car-details">
+                    <!-- Car details will be loaded here -->
+                </div>
+            </section>
+
+            <section class="receipt-section" id="payment-summary">
+                <h2>Payment Summary</h2>
+                <p><span>Subtotal:</span> <span id="receipt-subtotal"></span></p>
+                <p><span>Taxes & Fees:</span> <span id="receipt-tax"></span></p>
+                <hr>
+                <p class="receipt-total"><span>Total Paid:</span> <span id="receipt-total"></span></p>
+            </section>
+            
+            <section class="receipt-section" id="payment-method-info">
+                <h2>Payment Method</h2>
+                <p id="receipt-payment-method"></p>
+            </section>
+
+            <div class="receipt-actions">
+                <button id="print-receipt-btn">Print Receipt</button>
+                <a href="index.html" class="button-link">Back to Home</a>
+            </div>
+        </div>
+    </main>
+    <script src="receipt.js"></script>
+</body>
+</html>
