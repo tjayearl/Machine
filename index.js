@@ -1,5 +1,79 @@
 document.addEventListener("DOMContentLoaded", () => {
     fetchCars();
+
+    // Modal logic
+    const authModal = document.getElementById("auth-modal");
+    const loginBtnHeader = document.getElementById("login-btn-header");
+    const closeBtn = document.querySelector(".close-btn");
+    const loginForm = document.getElementById("login-form");
+    const registerForm = document.getElementById("register-form");
+    const showRegisterLink = document.getElementById("show-register");
+    const showLoginLink = document.getElementById("show-login");
+
+    if (loginBtnHeader) {
+        loginBtnHeader.onclick = function() {
+            authModal.style.display = "block";
+            // Show login form and hide register form by default
+            loginForm.style.display = "flex";
+            registerForm.style.display = "none";
+        }
+    }
+
+    if (closeBtn) {
+        closeBtn.onclick = function() {
+            authModal.style.display = "none";
+        }
+    }
+
+    // Close the modal if the user clicks anywhere outside of the modal content
+    window.onclick = function(event) {
+        if (event.target == authModal) {
+            authModal.style.display = "none";
+        }
+    }
+
+    // Toggle to Register form
+    if (showRegisterLink) {
+        showRegisterLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginForm.style.display = 'none';
+            registerForm.style.display = 'flex';
+        });
+    }
+
+    // Toggle to Login form
+    if (showLoginLink) {
+        showLoginLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            registerForm.style.display = 'none';
+            loginForm.style.display = 'flex';
+        });
+    }
+
+    if (loginForm) {
+        loginForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const email = document.getElementById("login-email").value;
+            const password = document.getElementById("login-password").value;
+            console.log("Login attempt with:", { email, password });
+            // Here you would typically send a request to your backend to authenticate the user
+            alert("Login functionality not yet implemented. Check console for data.");
+            loginForm.reset();
+        });
+    }
+
+    if (registerForm) {
+        registerForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = document.getElementById("register-name").value;
+            const email = document.getElementById("register-email").value;
+            const password = document.getElementById("register-password").value;
+            console.log("Registering with:", { name, email, password });
+            // Here you would typically send a request to your backend to create a new user
+            alert("Registration functionality not yet implemented. Check console for data.");
+            registerForm.reset();
+        });
+    }
 });
 
 const API_URL = "https://car4hire-coral.vercel.app/cars";       

@@ -17,11 +17,17 @@ header {
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
+}
+
+nav ul li:last-child {
+    margin-left: auto;
 }
 
 nav ul li a {
@@ -31,6 +37,33 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.auth-forms form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-forms input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.toggle-form {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.toggle-form a {
+    color: #c0392b;
+    text-decoration: none;
+    font-weight: bold;
+}
+.toggle-form a:hover {
     text-decoration: underline;
 }
 
