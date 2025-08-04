@@ -284,6 +284,57 @@ footer {
     font-size: 1.1em;
 }
 
+.payment-method-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.payment-method-btn {
+    flex: 1;
+    background-color: #555;
+    border: 1px solid #777;
+    padding: 12px;
+    font-size: 1em;
+}
+
+.payment-method-btn.active {
+    background-color: #c0392b;
+    border-color: #c0392b;
+    transform: none; /* Override hover/active transforms when active */
+}
+
+.card-details-row {
+    display: flex;
+    gap: 15px;
+}
+
+.card-details-row input {
+    flex: 1;
+}
+
+#checkout-form fieldset {
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+#checkout-form legend {
+    padding: 0 10px;
+    color: #c0392b;
+    font-weight: bold;
+}
+
+#checkout-form fieldset div {
+    margin-bottom: 10px;
+}
+
+#checkout-form label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
 .sold-text {
     font-size: 1.5em;
     font-weight: bold;

@@ -28,10 +28,30 @@
             <div id="checkout-form-container">
                 <h3>Complete Your Purchase</h3>
                 <form id="checkout-form">
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="Email Address" required>
-                    <input type="tel" placeholder="Phone Number" required>
+                    <fieldset>
+                        <legend>Your Details</legend>
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                    </fieldset>
+
                     <textarea placeholder="Additional Comments"></textarea>
+
+                    <fieldset>
+                        <legend>Payment Method</legend>
+                        <div class="payment-method-buttons">
+                            <button type="button" class="payment-method-btn active" data-method="credit-card">Credit Card</button>
+                            <button type="button" class="payment-method-btn" data-method="paypal">PayPal</button>
+                        </div>
+                        <input type="hidden" id="payment-method-input" name="payment-method" value="credit-card">
+                    </fieldset>
+                    <div id="credit-card-info">
+                        <input type="text" id="card-number" placeholder="Card Number">
+                        <div class="card-details-row">
+                            <input type="text" id="expiry-date" placeholder="MM/YY">
+                            <input type="text" id="cvc" placeholder="CVC">
+                        </div>
+                    </div>
                     <button type="submit">Complete Purchase</button>
                 </form>
             </div>

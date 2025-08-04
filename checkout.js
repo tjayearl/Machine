@@ -2,6 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const API_URL = "https://car4hire-coral.vercel.app/cars";
     const carDetailsContainer = document.getElementById("checkout-car-details");
     const checkoutForm = document.getElementById("checkout-form");
+    const creditCardInfo = document.getElementById('credit-card-info');
+    const creditCardInputs = creditCardInfo.querySelectorAll('input');
+    const paymentMethodButtons = document.querySelectorAll('.payment-method-btn');
+    const hiddenPaymentMethodInput = document.getElementById('payment-method-input');
 
     const getCarIdFromUrl = () => {
         const params = new URLSearchParams(window.location.search);
@@ -42,6 +46,35 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     };
     
+    const toggleCreditCardFields = (show) => {
+        if (show) {
+            creditCardInfo.style.display = 'block';
+            creditCardInputs.forEach(input => input.required = true);
+        } else {
+            creditCardInfo.style.display = 'none';
+            creditCardInputs.forEach(input => {
+                input.required = false;
+                input.value = ''; // Clear fields when hiding
+            });
+        }
+    };
+
+    paymentMethodButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            paymentMethodButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to the clicked button
+            button.classList.add('active');
+
+            const selectedMethod = button.dataset.method;
+            // Update the hidden input's value
+            hiddenPaymentMethodInput.value = selectedMethod;
+
+            // Show or hide the credit card fields based on the selection
+            toggleCreditCardFields(selectedMethod === 'credit-card');
+        });
+    });
+
     checkoutForm.addEventListener("submit", (e) => {
         e.preventDefault();
         // In a real application, you would process the payment here.
@@ -51,4 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const carId = getCarIdFromUrl();
     fetchCarDetails(carId);
+
+    // Initialize the payment form state
+    toggleCreditCardFields(hiddenPaymentMethodInput.value === 'credit-card');
 });
