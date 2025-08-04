@@ -44,6 +44,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             </div>
         `;
+        updateOrderSummary(car.price);
+    };
+
+    const updateOrderSummary = (price) => {
+        const subtotalElem = document.getElementById('summary-subtotal');
+        const taxElem = document.getElementById('summary-tax');
+        const totalElem = document.getElementById('summary-total');
+
+        const TAX_RATE = 0.08; // 8% tax rate
+        const subtotal = parseFloat(price) || 0;
+        const tax = subtotal * TAX_RATE;
+        const total = subtotal + tax;
+
+        subtotalElem.textContent = `$${subtotal.toFixed(2)}`;
+        taxElem.textContent = `$${tax.toFixed(2)}`;
+        totalElem.textContent = `$${total.toFixed(2)}`;
     };
     
     const toggleCreditCardFields = (show) => {

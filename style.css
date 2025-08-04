@@ -335,6 +335,41 @@ footer {
     cursor: pointer;
 }
 
+/* Order Summary Styles */
+#order-summary {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+}
+
+#order-summary h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+#order-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+#order-summary hr {
+    border: 0;
+    border-top: 1px solid #555;
+    margin: 15px 0;
+}
+
+#order-summary .summary-total {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#order-summary .summary-total span:last-child {
+    color: #c0392b;
+}
+
 .sold-text {
     font-size: 1.5em;
     font-weight: bold;
